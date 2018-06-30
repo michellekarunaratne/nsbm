@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.ViewSubjectDetailsController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="990.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="149.0" style="-fx-background-color: #2ed573;">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_Database_Administrator_104px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="242.0" layoutY="15.0" prefHeight="53.0" prefWidth="264.0" text="Administrator" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="431.0" prefWidth="149.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Button layoutY="34.0" mnemonicParsing="false" onAction="#adminButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Admin">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tableViewSubject" layoutX="170.0" layoutY="135.0" prefHeight="365.0" prefWidth="800.0">
+         <columns>
+            <TableColumn fx:id="columnSubjectCode" prefWidth="117.0" text="Subject Code" />
+            <TableColumn fx:id="columnSubjectName" prefWidth="135.0" text="Subject Name" />
+            <TableColumn fx:id="columnSubjectCourse" prefWidth="159.0" text="Course" />
+            <TableColumn fx:id="columnSubjectCourseName" prefWidth="152.0" text="Course ID" />
+            <TableColumn fx:id="columnSubjectYear" prefWidth="51.0" text="Year" />
+            <TableColumn fx:id="columnSubjectSemester" prefWidth="60.0" text="Semester" />
+            <TableColumn fx:id="columnSubjectCredits" prefWidth="48.0" text="Credits" />
+            <TableColumn fx:id="columnSubjectFee" prefWidth="77.0" text="Fee" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchBox" layoutX="418.0" layoutY="102.0" onKeyTyped="#searchRecord" prefHeight="25.0" prefWidth="304.0" promptText="Enter Course ID/Course Name/Duration/Course Type" />
+      <Label layoutX="330.0" layoutY="99.0" prefHeight="32.0" prefWidth="58.0" text="Search">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

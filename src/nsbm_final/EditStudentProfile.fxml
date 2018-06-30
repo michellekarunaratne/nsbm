@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.EditStudentProfileController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="602.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="149.0" style="-fx-background-color: #2ed573;">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_Student_Male_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="242.0" layoutY="15.0" prefHeight="53.0" prefWidth="219.0" text="Student" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="361.0" prefWidth="149.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Button fx:id="btn_profile" layoutY="59.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Profile">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane layoutX="171.0" layoutY="100.0" prefHeight="219.0" prefWidth="403.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="77.0" text="First Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="87.0" text="Second Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="119.0" prefHeight="32.0" prefWidth="68.0" text="Email">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="99.0" text="Edit Details" underline="true">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="159.0" prefHeight="32.0" prefWidth="68.0" text="Telephone">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldfirstName" layoutX="127.0" layoutY="47.0" prefHeight="25.0" prefWidth="250.0" />
+            <TextField fx:id="textFieldsecondName" layoutX="127.0" layoutY="85.0" prefHeight="25.0" prefWidth="250.0" />
+            <TextField fx:id="textFieldemail" layoutX="127.0" layoutY="123.0" prefHeight="25.0" prefWidth="250.0" />
+            <TextField fx:id="textFieldtelephone" layoutX="127.0" layoutY="163.0" prefHeight="25.0" prefWidth="250.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btn_done" layoutX="298.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Done">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.Undergrad_detailsController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="83.0" prefWidth="590.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="83.0" prefWidth="149.0" style="-fx-background-color: #2ed573;">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_Student_Male_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="242.0" layoutY="15.0" prefHeight="53.0" prefWidth="219.0" text="Student" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="356.0" prefWidth="149.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Button layoutY="56.0" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Profile">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="168.0" layoutY="105.0" prefHeight="266.0" prefWidth="403.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <Label layoutX="19.0" layoutY="34.0" prefHeight="32.0" prefWidth="68.0" text="Z Score">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="78.0" prefHeight="32.0" prefWidth="56.0" text="Rank">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="rank" layoutX="91.0" layoutY="81.0" prefHeight="26.0" prefWidth="276.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="zScore" layoutX="91.0" layoutY="37.0" prefHeight="26.0" prefWidth="276.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="118.0" prefHeight="32.0" prefWidth="56.0" text="Subject 1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="159.0" prefHeight="32.0" prefWidth="56.0" text="Subject 2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="200.0" prefHeight="32.0" prefWidth="56.0" text="Subject 3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="subject1" layoutX="91.0" layoutY="121.0" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="subject2" layoutX="91.0" layoutY="162.0" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="subject3" layoutX="91.0" layoutY="203.0" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="248.0" layoutY="118.0" prefHeight="32.0" prefWidth="43.0" text="Grade">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="248.0" layoutY="159.0" prefHeight="32.0" prefWidth="43.0" text="Grade">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="248.0" layoutY="200.0" prefHeight="32.0" prefWidth="43.0" text="Grade">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="grade1" layoutX="297.0" layoutY="121.0" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="grade2" layoutX="297.0" layoutY="162.0" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="grade3" layoutX="297.0" layoutY="203.0" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

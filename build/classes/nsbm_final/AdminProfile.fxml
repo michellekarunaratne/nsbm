@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.AdminProfileController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="795.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="149.0" style="-fx-background-color: #2ed573;">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_Database_Administrator_104px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="340.0" layoutY="15.0" prefHeight="53.0" prefWidth="264.0" text="Administrator" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="465.0" prefWidth="149.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Button fx:id="btn_student" layoutY="34.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Student">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_courseSubject" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Course &amp; Subject">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_result" layoutY="285.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Results &amp; Exam">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_faculty" layoutY="96.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Faculty">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_employee" layoutY="158.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Employee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutY="397.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #2ed573;" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="149.0" layoutY="83.0" prefHeight="465.0" prefWidth="646.0" style="-fx-background-color: #2f3640;">
+         <children>
+            <Pane fx:id="pnl_student" prefHeight="431.0" prefWidth="540.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane prefHeight="465.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Student Details">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <Pane layoutX="39.0" layoutY="73.0" prefHeight="254.0" prefWidth="582.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="13.0" layoutY="40.0" prefHeight="32.0" prefWidth="47.0" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="72.0" prefHeight="32.0" prefWidth="47.0" text="Faculty">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="faculty" layoutX="117.0" layoutY="75.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="name" layoutX="117.0" layoutY="43.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="14.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="104.0" prefHeight="32.0" prefWidth="47.0" text="Email">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="email" layoutX="117.0" layoutY="107.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="136.0" prefHeight="32.0" prefWidth="68.0" text="Telephone">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="telephone" layoutX="117.0" layoutY="139.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="course" layoutX="117.0" layoutY="171.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="165.0" prefHeight="32.0" prefWidth="68.0" text="Course">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="nic" layoutX="117.0" layoutY="208.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="205.0" prefHeight="32.0" prefWidth="68.0" text="NIC">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="51.0" layoutY="19.0" prefHeight="32.0" prefWidth="75.0" text="Registration ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldRegistration" layoutX="182.0" layoutY="23.0" prefHeight="25.0" prefWidth="176.0" />
+                                    <Button fx:id="btn_detail" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="472.0" layoutY="20.0" mnemonicParsing="false" onAction="#ViewMoreDetailButton" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="View More Details" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="btn_view" alignment="CENTER" contentDisplay="TOP" layoutX="402.0" layoutY="20.0" mnemonicParsing="false" onAction="#ViewDetailButton" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #1e3799;" text="View" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" contentDisplay="TOP" layoutX="39.0" layoutY="346.0" mnemonicParsing="false" onAction="#AddDetailButton" prefHeight="32.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="Add Student Details" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" contentDisplay="TOP" layoutX="450.0" layoutY="346.0" mnemonicParsing="false" onAction="#DeleteDetailButton" prefHeight="32.0" prefWidth="171.0" style="-fx-background-color: #ffffff;" text="Delete Student Details" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                        <Tab text="Edit Student Details">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <Pane layoutX="28.0" layoutY="58.0" prefHeight="248.0" prefWidth="485.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="77.0" text="First Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="87.0" text="Second Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="119.0" prefHeight="32.0" prefWidth="68.0" text="NIC">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="99.0" text="Edit Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="157.0" prefHeight="32.0" prefWidth="68.0" text="Telephone">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldEditFirst" layoutX="127.0" layoutY="47.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <TextField fx:id="textFieldEditSecond" layoutX="127.0" layoutY="85.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <TextField fx:id="textFieldEditNic" layoutX="127.0" layoutY="123.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <TextField fx:id="textFieldEditTelephone" layoutX="127.0" layoutY="160.0" prefHeight="25.0" prefWidth="250.0" />
+                                          <Label layoutX="13.0" layoutY="195.0" prefHeight="32.0" prefWidth="68.0" text="Email">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldEditEmail" layoutX="127.0" layoutY="198.0" prefHeight="25.0" prefWidth="250.0" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="39.0" layoutY="14.0" prefHeight="32.0" prefWidth="75.0" text="Registration ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldEditRegistration" layoutX="170.0" layoutY="18.0" prefHeight="25.0" prefWidth="176.0" />
+                                    <Button fx:id="btn_editView" alignment="CENTER" contentDisplay="TOP" layoutX="384.0" layoutY="15.0" mnemonicParsing="false" onAction="#EditDetailViewButton" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #1e3799;" text="View" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="156.0" layoutY="320.0" mnemonicParsing="false" onAction="#EditDetailButton" prefHeight="32.0" prefWidth="203.0" style="-fx-background-color: #dfe4ea;" text="Edit Details">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                        <Tab text="Edit Undergraduate Details">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="134.0" layoutY="37.0" prefHeight="402.0" prefWidth="514.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="40.0" layoutY="16.0" prefHeight="32.0" prefWidth="75.0" text="Registration ">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldEditUndegradRegistration" layoutX="170.0" layoutY="20.0" prefHeight="25.0" prefWidth="176.0" />
+                                          <Button fx:id="btn_undergradView" alignment="CENTER" contentDisplay="TOP" layoutX="397.0" layoutY="17.0" mnemonicParsing="false" onAction="#ViewUnderGraduateDetailsButton" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #1e3799;" text="View" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Pane layoutX="28.0" layoutY="63.0" prefHeight="248.0" prefWidth="485.0" style="-fx-background-color: #dfe4ea;">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="77.0" text="Z Score">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="87.0" text="Rank">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="13.0" layoutY="119.0" prefHeight="32.0" prefWidth="68.0" text="Subject 1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="99.0" text="Edit Details" underline="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="13.0" layoutY="157.0" prefHeight="32.0" prefWidth="68.0" text="Subject 2">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="textFieldZscore" layoutX="127.0" layoutY="47.0" prefHeight="25.0" prefWidth="276.0" />
+                                                <TextField fx:id="textFieldRank" layoutX="127.0" layoutY="85.0" prefHeight="25.0" prefWidth="277.0" />
+                                                <TextField fx:id="textFieldSubject1" layoutX="127.0" layoutY="123.0" prefHeight="25.0" prefWidth="157.0" />
+                                                <TextField fx:id="textFieldSubject2" layoutX="127.0" layoutY="160.0" prefHeight="25.0" prefWidth="158.0" />
+                                                <Label layoutX="13.0" layoutY="195.0" prefHeight="32.0" prefWidth="68.0" text="Subject 3">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="textFieldSubject3" layoutX="127.0" layoutY="198.0" prefHeight="25.0" prefWidth="158.0" />
+                                                <Label layoutX="301.0" layoutY="120.0" prefHeight="32.0" prefWidth="68.0" text="Grade">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="301.0" layoutY="157.0" prefHeight="32.0" prefWidth="68.0" text="Grade">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="301.0" layoutY="195.0" prefHeight="32.0" prefWidth="68.0" text="Grade">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="textFieldGrade1" layoutX="347.0" layoutY="124.0" prefHeight="25.0" prefWidth="58.0" />
+                                                <TextField fx:id="textFieldGrade2" layoutX="346.0" layoutY="161.0" prefHeight="25.0" prefWidth="61.0" />
+                                                <TextField fx:id="textFieldGrade3" layoutX="346.0" layoutY="199.0" prefHeight="25.0" prefWidth="60.0" />
+                                             </children>
+                                          </Pane>
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="156.0" layoutY="333.0" mnemonicParsing="false" onAction="#EditUndegradDetailButton" prefHeight="32.0" prefWidth="203.0" style="-fx-background-color: #dfe4ea;" text="Edit Details">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Edit Postgraduate Details">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="96.0" layoutY="36.0" prefHeight="402.0" prefWidth="514.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Pane layoutX="30.0" layoutY="81.0" prefHeight="182.0" prefWidth="482.0" style="-fx-background-color: #dfe4ea;">
+                                             <children>
+                                                <Label layoutX="19.0" layoutY="34.0" prefHeight="32.0" prefWidth="112.0" text="Qualification Type">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="19.0" layoutY="78.0" prefHeight="32.0" prefWidth="119.0" text="Year Of Completion">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="19.0" layoutY="8.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="19.0" layoutY="118.0" prefHeight="32.0" prefWidth="112.0" text="Institue">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="textFieldEditQualification" layoutX="151.0" layoutY="38.0" prefHeight="25.0" prefWidth="220.0" />
+                                                <TextField fx:id="textFieldEditYearOfCmp" layoutX="151.0" layoutY="82.0" prefHeight="25.0" prefWidth="220.0" />
+                                                <TextField fx:id="textFieldEditInstitute" layoutX="151.0" layoutY="122.0" prefHeight="25.0" prefWidth="220.0" />
+                                             </children>
+                                          </Pane>
+                                          <Button fx:id="btn_postgradView" alignment="CENTER" contentDisplay="TOP" layoutX="419.0" layoutY="31.0" mnemonicParsing="false" onAction="#ViewPostGraduateDetailsButton" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #1e3799;" text="View" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="textFieldEditpostgradRegistration" layoutX="178.0" layoutY="33.0" prefHeight="25.0" prefWidth="220.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="169.0" layoutY="292.0" mnemonicParsing="false" onAction="#EditPostgradDetailButton" prefHeight="32.0" prefWidth="203.0" style="-fx-background-color: #dfe4ea;" text="Edit Details">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children></Pane>
+                                    <Label layoutX="50.0" layoutY="26.0" prefHeight="32.0" prefWidth="75.0" text="Registration ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_faculty" prefHeight="431.0" prefWidth="540.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane layoutX="1.0" prefHeight="465.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="View Faculty Data">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #dfe4ea;">
+                                 <children>
+                                    <Pane layoutX="22.0" layoutY="21.0" prefHeight="390.0" prefWidth="602.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Button fx:id="btn_facultyView" alignment="CENTER" contentDisplay="TOP" layoutX="227.0" layoutY="300.0" mnemonicParsing="false" onAction="#ViewFacultyData" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="View Faculty Data" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TableView fx:id="tableFaculty" layoutX="93.0" layoutY="69.0" prefHeight="200.0" prefWidth="418.0">
+                                            <columns>
+                                              <TableColumn fx:id="columnFacId" prefWidth="215.0" text="Faculty ID" />
+                                              <TableColumn fx:id="columnFacName" minWidth="3.0" prefWidth="201.0" text="Faculty Name" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="163.0" text="View Faculty Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                      <Tab text="Edit Faculty Data ">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="92.0" layoutY="39.0" prefHeight="141.0" prefWidth="463.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="129.0" text="Faculty ID">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="85.0" text="Faculty Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="163.0" text="Edit Faculty Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldEditFacId" layoutX="125.0" layoutY="47.0" prefHeight="25.0" prefWidth="305.0" />
+                                          <TextField fx:id="textFieldEditFacName" layoutX="125.0" layoutY="85.0" prefHeight="25.0" prefWidth="305.0" />
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="btn_student1" layoutX="249.0" layoutY="218.0" mnemonicParsing="false" onAction="#EditFacDetailButton" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #dfe4ea;" text="Edit">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></Pane>
+            <Pane fx:id="pnl_result" prefHeight="431.0" prefWidth="540.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane layoutX="-1.0" prefHeight="465.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="View Exam Grades">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="19.0" layoutY="16.0" prefHeight="405.0" prefWidth="606.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="156.0" text="View Exam Grades" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableExamGrade" layoutX="24.0" layoutY="116.0" prefHeight="245.0" prefWidth="559.0">
+                                            <columns>
+                                              <TableColumn fx:id="columnExamSubCode" prefWidth="357.0" text="Subject Code" />
+                                              <TableColumn fx:id="columnExamYear" prefWidth="57.0" text="Year" />
+                                                <TableColumn fx:id="columnExamSemester" prefWidth="70.0" text="Semester" />
+                                                <TableColumn fx:id="columnExamGrade" prefWidth="74.0" text="Grade" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="24.0" layoutY="76.0" prefHeight="32.0" prefWidth="36.0" text="Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="273.0" layoutY="76.0" prefHeight="32.0" prefWidth="61.0" text="Semester">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="ExamYear" layoutX="105.0" layoutY="80.0" prefWidth="150.0" />
+                                          <ChoiceBox fx:id="ExamSemester" layoutX="349.0" layoutY="80.0" prefWidth="150.0" />
+                                          <Label layoutX="24.0" layoutY="40.0" prefHeight="32.0" prefWidth="77.0" text="Registration">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldExamReg" layoutX="106.0" layoutY="44.0" />
+                                          <Button fx:id="btn_viewExamGradeDetails" alignment="CENTER" contentDisplay="TOP" layoutX="526.0" layoutY="77.0" mnemonicParsing="false" onAction="#ViewStudentExamGradeButton" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #1e3799;" text="View " textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btn_viewExamStudentGrade" layoutX="229.0" layoutY="367.0" mnemonicParsing="false" onAction="#ViewSubjectExamGrades" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #dfe4ea;" text="View Subject Grade" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Add Exam Grades">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="20.0" layoutY="16.0" prefHeight="405.0" prefWidth="606.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="156.0" text="Add Exam Grades" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableExamSubGrade" layoutX="88.0" layoutY="115.0" prefHeight="282.0" prefWidth="431.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnExamSubRegNum" onEditCommit="#EditExamRegNumCellEvent" prefWidth="357.0" text="Registration Number" />
+                                                <TableColumn fx:id="columnExamSubGrade" onEditCommit="#EditExamGradeCellEvent" prefWidth="74.0" text="Grade" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="24.0" layoutY="40.0" prefHeight="32.0" prefWidth="77.0" text="SubCode">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldExamSubCode" layoutX="106.0" layoutY="44.0" prefHeight="25.0" prefWidth="149.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="434.0" layoutY="77.0" mnemonicParsing="false" onAction="#InsertExamGrades" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Add Exam Grades" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="27.0" layoutY="76.0" mnemonicParsing="false" onAction="#AddSubGradeDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="New Record">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="textFieldExamSubExamCode" layoutX="434.0" layoutY="44.0" prefHeight="25.0" prefWidth="149.0" />
+                                          <Label layoutX="330.0" layoutY="41.0" prefHeight="32.0" prefWidth="77.0" text="Exam Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="View/Add Exam Details">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="20.0" layoutY="16.0" prefHeight="405.0" prefWidth="606.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="540.0" text="View Exam Details (To View Enter Only ExamYear,Year,Semester)" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableExamSubDetails" layoutX="60.0" layoutY="166.0" prefHeight="201.0" prefWidth="486.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnExamSubDetailsSubCode" onEditCommit="#EditExamSubDetailSubCodeCellEvent" prefWidth="240.0" text="Subject Code" />
+                                                <TableColumn fx:id="columnExamSubDetailsStartingDay" onEditCommit="#EditExamSubDetailStartDayCellEvent" prefWidth="245.0" text="Strating Day" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="191.0" layoutY="42.0" prefHeight="32.0" prefWidth="36.0" text="Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="323.0" layoutY="41.0" prefHeight="32.0" prefWidth="61.0" text="Semester">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="ExamDetailYear" layoutX="235.0" layoutY="45.0" prefHeight="25.0" prefWidth="68.0" />
+                                          <ChoiceBox fx:id="ExamDetailSemester" layoutX="393.0" layoutY="46.0" prefHeight="25.0" prefWidth="93.0" />
+                                          <Button fx:id="btn_viewExamSubDetails" alignment="CENTER" contentDisplay="TOP" layoutX="518.0" layoutY="42.0" mnemonicParsing="false" onAction="#ViewExamDetails" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #1e3799;" text="View " textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="24.0" layoutY="41.0" prefHeight="32.0" prefWidth="68.0" text="Exam Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textfieldExamDetailExamYear" layoutX="106.0" layoutY="45.0" prefHeight="25.0" prefWidth="68.0" />
+                                          <TextField fx:id="textfieldExamDetailExamStartDate" layoutX="275.0" layoutY="80.0" prefHeight="25.0" prefWidth="95.0" />
+                                          <Label layoutX="179.0" layoutY="76.0" prefHeight="32.0" prefWidth="96.0" text="Exam Start Date">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="60.0" layoutY="124.0" mnemonicParsing="false" onAction="#AddExamSubDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Add New Record">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="419.0" layoutY="125.0" mnemonicParsing="false" onAction="#InsertExamSubDetails" prefHeight="30.0" prefWidth="127.0" style="-fx-background-color: #1e3799;" text="Insert Record" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="376.0" layoutY="76.0" prefHeight="32.0" prefWidth="58.0" text="Exam Fee">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textfieldExamDetailExamFee" layoutX="438.0" layoutY="81.0" prefHeight="25.0" prefWidth="90.0" />
+                                          <Label layoutX="24.0" layoutY="77.0" prefHeight="32.0" prefWidth="68.0" text="Exam Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textfieldExamDetailExamCode" layoutX="106.0" layoutY="81.0" prefHeight="25.0" prefWidth="68.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="253.0" layoutY="125.0" mnemonicParsing="false" onAction="#EditExamDetails" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #1e3799;" text="Edit Record" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Add/View Assignment Grade">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="20.0" layoutY="16.0" prefHeight="405.0" prefWidth="606.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="213.0" text="View Assignemnt Grades" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableAssignmentGrade" layoutX="61.0" layoutY="146.0" prefHeight="245.0" prefWidth="486.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnAssignmentGradeRegNum" onEditCommit="#EditAssignmentGradeRegNumCellEvent" prefWidth="176.0" text="Registration Number" />
+                                                <TableColumn fx:id="columnAssignmentGradeInClass" onEditCommit="#EditAssignmentGradeInClassEvent" prefWidth="168.0" text="Lab/In class Assignment" />
+                                                <TableColumn fx:id="columnAssignmentGradeTakeHome" onEditCommit="#EditAssignmentGradeTakeHomeEvent" prefWidth="140.0" text="Project/Report" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="14.0" layoutY="40.0" prefHeight="32.0" prefWidth="77.0" text="Sub Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldAssignmentGradeSubCode" layoutX="68.0" layoutY="44.0" prefHeight="25.0" prefWidth="86.0" />
+                                          <Button fx:id="btn_viewAssignmentGrade" alignment="CENTER" contentDisplay="TOP" layoutX="547.0" layoutY="41.0" mnemonicParsing="false" onAction="#ViewAssignmentGradeButton" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #1e3799;" text="View " textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="364.0" layoutY="40.0" prefHeight="32.0" prefWidth="97.0" text="Assignment Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldAssignmentGradeAssignmentYear" layoutX="467.0" layoutY="45.0" prefHeight="25.0" prefWidth="75.0" />
+                                          <Button layoutX="61.0" layoutY="99.0" mnemonicParsing="false" onAction="#AddAssignmentGradeDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Add Record">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="413.0" layoutY="100.0" mnemonicParsing="false" onAction="#InsertAssignmentGrades" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #1e3799;" text="Insert Record" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="157.0" layoutY="40.0" prefHeight="32.0" prefWidth="87.0" text="Subject Type">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="AssignmentGradeSubjectType" layoutX="232.0" layoutY="44.0" prefHeight="25.0" prefWidth="131.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="244.0" layoutY="100.0" mnemonicParsing="false" onAction="#EditAssignmentGrades" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #1e3799;" text="Edit Record" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Delete Records">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="20.0" layoutY="16.0" prefHeight="405.0" prefWidth="606.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="172.0" text="Delete Exam Grades" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="24.0" layoutY="40.0" prefHeight="32.0" prefWidth="123.0" text="Registration Number">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteExamGradeRegNum" layoutX="155.0" layoutY="44.0" prefHeight="25.0" prefWidth="111.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="510.0" layoutY="41.0" mnemonicParsing="false" onAction="#deleteExamGrades" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #1e3799;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="textFieldDeleteExamGradeSubCode" layoutX="360.0" layoutY="44.0" prefHeight="25.0" prefWidth="126.0" />
+                                          <Label layoutX="276.0" layoutY="40.0" prefHeight="32.0" prefWidth="77.0" text="Subject Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="24.0" layoutY="125.0" prefHeight="26.0" prefWidth="172.0" text="Delete Exam Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteExamDetailsExamCode" layoutX="155.0" layoutY="155.0" prefHeight="25.0" prefWidth="111.0" />
+                                          <Label layoutX="24.0" layoutY="151.0" prefHeight="32.0" prefWidth="123.0" text="Exam Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="510.0" layoutY="153.0" mnemonicParsing="false" onAction="#deleteExamDetails" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #1e3799;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="29.0" layoutY="190.0" prefHeight="26.0" prefWidth="236.0" text="Delete Exam Subject Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="29.0" layoutY="219.0" prefHeight="32.0" prefWidth="79.0" text="Exam Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteExamSubDetailsExamCode" layoutX="155.0" layoutY="223.0" prefHeight="25.0" prefWidth="111.0" />
+                                          <Label layoutX="276.0" layoutY="220.0" prefHeight="32.0" prefWidth="77.0" text="Subject Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteExamSubDetailsSubCode" layoutX="360.0" layoutY="224.0" prefHeight="25.0" prefWidth="126.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="510.0" layoutY="220.0" mnemonicParsing="false" onAction="#deleteExamSubjectDetails" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #1e3799;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="24.0" layoutY="271.0" prefHeight="26.0" prefWidth="283.0" text="Delete Subject Assignment Grades" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="29.0" layoutY="298.0" prefHeight="32.0" prefWidth="123.0" text="Registration Number">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteAssignmentDetailsRegNum" layoutX="155.0" layoutY="301.0" prefHeight="25.0" prefWidth="111.0" />
+                                          <Label layoutX="276.0" layoutY="297.0" prefHeight="32.0" prefWidth="77.0" text="Subject Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteAssignmentDetailsSubCode" layoutX="360.0" layoutY="301.0" prefHeight="25.0" prefWidth="126.0" />
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="510.0" layoutY="341.0" mnemonicParsing="false" onAction="#deleteAssignmentDetails" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #1e3799;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="29.0" layoutY="340.0" prefHeight="32.0" prefWidth="123.0" text="Subject Type">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="DeleteAssignmentSubjectType" layoutX="155.0" layoutY="344.0" prefHeight="25.0" prefWidth="112.0" />
+                                          <TextField fx:id="textFieldDeleteExamCode" layoutX="156.0" layoutY="88.0" prefHeight="25.0" prefWidth="111.0" />
+                                          <Label layoutX="29.0" layoutY="85.0" prefHeight="32.0" prefWidth="123.0" text="Exam Code">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDeleteAssignmentDetailsYear" layoutX="360.0" layoutY="344.0" prefHeight="25.0" prefWidth="126.0" />
+                                          <Label layoutX="276.0" layoutY="341.0" prefHeight="32.0" prefWidth="77.0" text="Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Grade Emails">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="20.0" layoutY="16.0" prefHeight="100.0" prefWidth="606.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="24.0" layoutY="14.0" prefHeight="26.0" prefWidth="172.0" text="Send Email" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Button alignment="CENTER" contentDisplay="TOP" layoutX="435.0" layoutY="42.0" mnemonicParsing="false" onAction="#sendEmailButton" prefHeight="30.0" prefWidth="119.0" style="-fx-background-color: #1e3799;" text="Send Email" textFill="WHITE">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="textFieldSendEmailExamYear" layoutX="133.0" layoutY="45.0" prefHeight="25.0" prefWidth="126.0" />
+                                          <Label layoutX="24.0" layoutY="41.0" prefHeight="32.0" prefWidth="77.0" text="Exam Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></Pane>
+            <Pane fx:id="pnl_employee" prefHeight="431.0" prefWidth="540.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane prefHeight="465.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="View Employee Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="518.0">
+                                 <children>
+                                    <Pane layoutX="39.0" layoutY="71.0" prefHeight="260.0" prefWidth="566.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="129.0" text="Employee Type">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="47.0" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="119.0" prefHeight="32.0" prefWidth="56.0" text="Address">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelEmpType" layoutX="125.0" layoutY="46.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="labelEmpAddress" alignment="TOP_LEFT" layoutX="125.0" layoutY="125.0" prefHeight="53.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="labelEmpName" layoutX="125.0" layoutY="84.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="182.0" prefHeight="32.0" prefWidth="47.0" text="Email">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelEmpEmail" layoutX="125.0" layoutY="185.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="217.0" prefHeight="32.0" prefWidth="68.0" text="Telephone">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelEmpTelephone" layoutX="125.0" layoutY="220.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="btn_viewEmp" alignment="CENTER" contentDisplay="TOP" layoutX="475.0" layoutY="26.0" mnemonicParsing="false" onAction="#ViewEmpDetailButton" prefHeight="30.0" prefWidth="58.0" style="-fx-background-color: #1e3799;" text="View " textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="125.0" layoutY="25.0" prefHeight="32.0" prefWidth="93.0" text="Employee  ID">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldViewEmpId" layoutX="218.0" layoutY="29.0" prefHeight="25.0" prefWidth="208.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Add Employee Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="47.0" layoutY="21.0" prefHeight="305.0" prefWidth="553.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="129.0" text="Employee ID">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="47.0" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="119.0" prefHeight="32.0" prefWidth="56.0" text="Address">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="182.0" prefHeight="32.0" prefWidth="47.0" text="Email">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="217.0" prefHeight="32.0" prefWidth="68.0" text="Telephone">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="259.0" prefHeight="32.0" prefWidth="94.0" text="Employee Type">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldAddEmpId" layoutX="125.0" layoutY="47.0" prefHeight="25.0" prefWidth="374.0" />
+                                          <TextArea fx:id="textAreaEmpAddAddress" layoutX="125.0" layoutY="119.0" prefHeight="53.0" prefWidth="375.0" />
+                                          <TextField fx:id="textFieldAddEmpEmail" layoutX="125.0" layoutY="186.0" prefHeight="25.0" prefWidth="375.0" />
+                                          <TextField fx:id="textFieldAddEmpTelephone" layoutX="125.0" layoutY="221.0" prefHeight="25.0" prefWidth="377.0" />
+                                          <ChoiceBox fx:id="empType" layoutX="128.0" layoutY="263.0" prefHeight="25.0" prefWidth="374.0" />
+                                          <TextArea fx:id="textAreaEmpAddName" layoutX="125.0" layoutY="85.0" prefHeight="24.0" prefWidth="374.0" />
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="btn_student2" layoutX="249.0" layoutY="341.0" mnemonicParsing="false" onAction="#AddEmpDetailsButton" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #dfe4ea;" text="Add">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Lectuer Teaching Details">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="lecTeaching" layoutX="17.0" layoutY="65.0" prefHeight="253.0" prefWidth="618.0">
+                                      <columns>
+                                        <TableColumn fx:id="lecEmpId" onEditCommit="#EditEmpIdCellEvent" prefWidth="117.0" text="Employee ID" />
+                                        <TableColumn fx:id="lecSubCode" onEditCommit="#EditSubCodeCellEvent" prefWidth="135.0" text="Subject Code" />
+                                          <TableColumn fx:id="lecLocation" onEditCommit="#EditLocationCellEvent" prefWidth="159.0" text="Location" />
+                                          <TableColumn fx:id="lecStartTime" onEditCommit="#EditStartTimeCellEvent" prefWidth="103.0" text="Start TIme" />
+                                          <TableColumn fx:id="lecDay" onEditCommit="#EditDayCellEvent" prefWidth="102.0" text="Day" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="17.0" layoutY="23.0" mnemonicParsing="false" onAction="#AddLecTeachingDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="New Record">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="483.0" layoutY="23.0" mnemonicParsing="false" onAction="#InsertLecTeachingDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Insert Records">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btn_viewLecTeaching" layoutX="17.0" layoutY="356.0" mnemonicParsing="false" onAction="#ViewLecTeachingDetails" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #ffffff;" text="View Teaching Details" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="439.0" layoutY="356.0" mnemonicParsing="false" onAction="#deleteLecTeaching" prefHeight="32.0" prefWidth="196.0" style="-fx-background-color: #ffffff;" text="Delete  Teaching Records" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Instructor Teaching Details">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="insTeaching" layoutX="13.0" layoutY="57.0" prefHeight="253.0" prefWidth="623.0">
+                                       <columns>
+                                          <TableColumn fx:id="insEmpId" onEditCommit="#EditInsEmpIdCellEvent" prefWidth="117.0" text="Employee ID" />
+                                          <TableColumn fx:id="insSubCode" onEditCommit="#EditInsSubCodeCellEvent" prefWidth="135.0" text="Subject Code" />
+                                          <TableColumn fx:id="insLabId" onEditCommit="#EdiInstLabIdCellEvent" prefWidth="159.0" text="Lab " />
+                                          <TableColumn fx:id="insStartTime" onEditCommit="#EditInsStartTimeCellEvent" prefWidth="103.0" text="Start TIme" />
+                                          <TableColumn fx:id="insDay" onEditCommit="#EditInsDayCellEvent" prefWidth="108.0" text="Day" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#AddInsTeachingDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="New Record">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="487.0" layoutY="14.0" mnemonicParsing="false" onAction="#InsertInsTeachingDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Insert Records">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btn_viewLecTeaching1" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#ViewInsTeachingDetails" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #ffffff;" text="View Teaching Details" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="440.0" layoutY="356.0" mnemonicParsing="false" onAction="#deleteInsTeaching" prefHeight="32.0" prefWidth="196.0" style="-fx-background-color: #ffffff;" text="Delete  Teaching Records" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></Pane>
+            <Pane fx:id="pnl_courseSubject" prefHeight="431.0" prefWidth="540.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane layoutY="7.0" prefHeight="458.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Add/View/Edit/Delete Courses">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="79.0" layoutY="73.0" prefHeight="197.0" prefWidth="488.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="129.0" text="Course Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="77.0" prefHeight="32.0" prefWidth="56.0" text="Faculty">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="124.0" text="Course Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldCourseName" layoutX="125.0" layoutY="47.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <TextField fx:id="textFieldCourseFaculty" layoutX="125.0" layoutY="81.0" prefHeight="25.0" prefWidth="304.0" promptText="Computing/Engineering/Business" />
+                                          <Label layoutX="14.0" layoutY="116.0" prefHeight="32.0" prefWidth="56.0" text="Duration">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="151.0" prefHeight="32.0" prefWidth="81.0" text="Course Type">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldCourseDuration" layoutX="125.0" layoutY="119.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <TextField fx:id="textFieldCourseType" layoutX="125.0" layoutY="155.0" prefHeight="25.0" prefWidth="304.0" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="154.0" layoutY="27.0" prefHeight="32.0" prefWidth="61.0" text="Course ID">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldCourseId" layoutX="249.0" layoutY="30.0" prefHeight="25.0" prefWidth="149.0" />
+                                    <Button fx:id="btn_viewCourseDetails" alignment="CENTER" contentDisplay="TOP" layoutX="426.0" layoutY="28.0" mnemonicParsing="false" onAction="#ViewCourseButton" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #1e3799;" text="View " textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btn_student3" layoutX="249.0" layoutY="356.0" mnemonicParsing="false" onAction="#ViewCourseDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ffffff;" text="View All Courses" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="80.0" layoutY="290.0" mnemonicParsing="false" onAction="#InsertCourseDetails" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Add Course Data" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="418.0" layoutY="290.0" mnemonicParsing="false" onAction="#DeleteCourseDetails" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Delete Course Data" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="249.0" layoutY="290.0" mnemonicParsing="false" onAction="#EditCourseDetails" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Edit Course Data" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Add/View/Edit/Delete Subjects">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="80.0" layoutY="50.0" prefHeight="290.0" prefWidth="488.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="102.0" text="Subject Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="77.0" prefHeight="32.0" prefWidth="107.0" text="Course Name/ID">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="124.0" text="Subject Details" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSubjectName" layoutX="125.0" layoutY="47.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <TextField fx:id="textFieldSubjectCourseId" layoutX="125.0" layoutY="81.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <Label layoutX="14.0" layoutY="114.0" prefHeight="32.0" prefWidth="81.0" text="Year">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSubjectYear" layoutX="125.0" layoutY="117.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <Label layoutX="14.0" layoutY="146.0" prefHeight="32.0" prefWidth="81.0" text="Semester">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSubjectSemester" layoutX="125.0" layoutY="149.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <Label layoutX="14.0" layoutY="181.0" prefHeight="32.0" prefWidth="81.0" text="Credits">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSubjectCredits" layoutX="125.0" layoutY="184.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <Label layoutX="14.0" layoutY="220.0" prefHeight="32.0" prefWidth="81.0" text="Fee">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSubjectFee" layoutX="125.0" layoutY="223.0" prefHeight="25.0" prefWidth="304.0" />
+                                          <Label layoutX="14.0" layoutY="252.0" prefHeight="32.0" prefWidth="81.0" text="Mode">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSubjectMode" layoutX="125.0" layoutY="256.0" prefHeight="25.0" prefWidth="304.0" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="157.0" layoutY="11.0" prefHeight="32.0" prefWidth="61.0" text="Subject ID">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldSubjectCode" layoutX="249.0" layoutY="14.0" prefHeight="25.0" prefWidth="149.0" />
+                                    <Button fx:id="btn_viewSubjectDetails" alignment="CENTER" contentDisplay="TOP" layoutX="425.0" layoutY="12.0" mnemonicParsing="false" onAction="#viewSubjectData" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #1e3799;" text="View " textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="51.0" layoutY="348.0" mnemonicParsing="false" onAction="#AddSubjectDetails" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Add Subject Data" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="250.0" layoutY="348.0" mnemonicParsing="false" onAction="#EditSubjectDetails" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Edit Subject Data" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="444.0" layoutY="348.0" mnemonicParsing="false" onAction="#DeleteSubjectDetails" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: #1e3799;" text="Delete Subject Data" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="250.0" layoutY="390.0" mnemonicParsing="false" onAction="#ViewSubjectDetails" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ffffff;" text="View All Subjects" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Add/Edit Enrollment DeadLine">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="79.0" layoutY="35.0" prefHeight="104.0" prefWidth="488.0" style="-fx-background-color: #dfe4ea;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="102.0" text="Deadline Date">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="204.0" text="Add Enrollment Deadline" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldDate" layoutX="125.0" layoutY="47.0" prefHeight="25.0" prefWidth="304.0" />
+                                       </children>
+                                    </Pane>
+                                    <Button alignment="CENTER" contentDisplay="TOP" layoutX="249.0" layoutY="185.0" mnemonicParsing="false" onAction="#AddDeadline" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #1e3799;" text="Add Deadline Date" textFill="WHITE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

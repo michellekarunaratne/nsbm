@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="767.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.RegistrationController">
+    <stylesheets>
+        <URL value="@registration.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@registration.css" />
+          </stylesheets>
+         <children>
+            <Pane layoutX="7.0" prefHeight="67.0" prefWidth="761.0" style="-fx-background-color: #1e3799;">
+               <children>
+                  <Pane layoutX="-7.0" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #2ed573;">
+                     <children>
+                        <ImageView fitHeight="74.0" fitWidth="53.0" layoutX="64.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8_Registration_96px_1.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label alignment="CENTER" layoutX="344.0" layoutY="7.0" prefHeight="53.0" prefWidth="219.0" text="Register" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <AnchorPane layoutY="67.0" prefHeight="533.0" prefWidth="200.0" style="-fx-background-color: #1e3799;">
+               <children>
+                  <Button fx:id="btn_personal" layoutY="41.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #ced6e0;" text="Personal Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="btn_undergraduate" layoutY="116.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #ced6e0;" text="Undergraduate">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="btn_postgraduate" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #ced6e0;" text="Postgraduate">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="btn_proceed" layoutY="307.0" mnemonicParsing="false" onAction="#FinishButtonAction" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #2ed573;" text="Finish">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="200.0" layoutY="67.0" prefHeight="432.0" prefWidth="558.0">
+               <children>
+                  <Pane fx:id="pnl_undergraduate" prefHeight="533.0" prefWidth="568.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="20.0" prefHeight="27.0" prefWidth="200.0" text="Undergraduate Details" textFill="#838080" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="120.0" prefHeight="32.0" prefWidth="91.0" text="A/L Stream">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="214.0" prefHeight="32.0" prefWidth="91.0" text="Subject 1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="264.0" prefHeight="32.0" prefWidth="91.0" text="Subject 2">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="311.0" prefHeight="32.0" prefWidth="91.0" text="Subject 3">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sub1" layoutX="129.0" layoutY="218.0" prefHeight="25.0" prefWidth="183.0" />
+                        <TextField fx:id="sub2" layoutX="129.0" layoutY="267.0" prefHeight="25.0" prefWidth="183.0" />
+                        <TextField fx:id="sub3" layoutX="129.0" layoutY="315.0" prefHeight="25.0" prefWidth="183.0" />
+                        <Label layoutX="335.0" layoutY="211.0" prefHeight="32.0" prefWidth="50.0" text="Grade">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="grade1" layoutX="400.0" layoutY="218.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="335.0" layoutY="264.0" prefHeight="32.0" prefWidth="50.0" text="Grade">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="grade2" layoutX="400.0" layoutY="268.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="335.0" layoutY="311.0" prefHeight="32.0" prefWidth="50.0" text="Grade">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="grade3" layoutX="400.0" layoutY="315.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="13.0" layoutY="165.0" prefHeight="32.0" prefWidth="91.0" text="Z-Score">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="stream" layoutX="129.0" layoutY="123.0" prefHeight="25.0" prefWidth="183.0" />
+                        <TextField fx:id="zScore" layoutX="129.0" layoutY="168.0" prefHeight="25.0" prefWidth="183.0" />
+                        <Label layoutX="335.0" layoutY="166.0" prefHeight="32.0" prefWidth="50.0" text="Rank">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rank" layoutX="400.0" layoutY="169.0" prefHeight="25.0" prefWidth="91.0" />
+                        <ImageView fitHeight="97.0" fitWidth="106.0" layoutX="450.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8_Student_Registration_100px_2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="13.0" layoutY="73.0" prefHeight="32.0" prefWidth="91.0" text="Registration ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldregistrationUnderGrad" layoutX="129.0" layoutY="77.0" prefHeight="25.0" prefWidth="183.0" />
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Pane>
+                  <Pane fx:id="pnl_postgraduate" prefHeight="533.0" prefWidth="568.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="26.0" layoutY="23.0" prefHeight="27.0" prefWidth="207.0" text="Post Graduate Details" textFill="#838080" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="202.0" prefHeight="32.0" prefWidth="112.0" text="Qualification Type">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="118.0" prefHeight="32.0" prefWidth="112.0" text="Year of Completion">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="159.0" prefHeight="32.0" prefWidth="112.0" text="Institute">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="122.0" fitWidth="118.0" layoutX="424.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8_Student_Registration_100px_2.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="qualification" layoutX="147.0" layoutY="206.0" prefHeight="25.0" prefWidth="243.0" />
+                        <TextField fx:id="yearCmp" layoutX="147.0" layoutY="122.0" prefHeight="25.0" prefWidth="243.0" />
+                        <TextField fx:id="institute" layoutX="147.0" layoutY="163.0" prefHeight="25.0" prefWidth="243.0" />
+                        <TextField fx:id="textFieldregistrationPostGrad" layoutX="147.0" layoutY="78.0" prefHeight="25.0" prefWidth="243.0" />
+                        <Label layoutX="14.0" layoutY="75.0" prefHeight="32.0" prefWidth="130.0" text="Registration Number">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Pane>
+                  <Pane fx:id="pnl_personal" layoutX="-1.0" layoutY="-1.0" prefHeight="534.0" prefWidth="569.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="23.0" layoutY="60.0" prefHeight="32.0" prefWidth="141.0" text="First Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="142.0" prefHeight="32.0" prefWidth="141.0" text="Last Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="204.0" prefHeight="32.0" prefWidth="141.0" text="NIC">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="248.0" prefHeight="32.0" prefWidth="141.0" text="Telephone">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="300.0" prefHeight="32.0" prefWidth="141.0" text="Email">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="348.0" prefHeight="32.0" prefWidth="141.0" text="Faculty">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textAreafirst" layoutX="188.0" layoutY="60.0" prefHeight="61.0" prefWidth="300.0" />
+                        <TextArea fx:id="textArealast" layoutX="188.0" layoutY="142.0" prefHeight="53.0" prefWidth="300.0" />
+                        <TextField fx:id="textFieldnic" layoutX="188.0" layoutY="208.0" prefHeight="25.0" prefWidth="300.0" />
+                        <TextField fx:id="textFieldtelephone" layoutX="188.0" layoutY="252.0" prefHeight="25.0" prefWidth="300.0" />
+                        <TextField fx:id="textFieldemail" layoutX="188.0" layoutY="304.0" prefHeight="25.0" prefWidth="300.0" />
+                        <Label layoutX="23.0" layoutY="25.0" prefHeight="17.0" prefWidth="157.0" text="Personal Details" textFill="#838080" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="211.0" text="*" textFill="#fc0707">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="307.0" text="*" textFill="#fc0707">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldcourse" layoutX="188.0" layoutY="402.0" prefHeight="25.0" prefWidth="300.0" />
+                        <Label layoutX="23.0" layoutY="399.0" prefHeight="32.0" prefWidth="141.0" text="Course">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="65.0" layoutY="405.0" text="*" textFill="#fc0707">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="faculty" layoutX="188.0" layoutY="352.0" prefHeight="25.0" prefWidth="300.0" />
+                        <Label layoutX="23.0" layoutY="458.0" prefHeight="32.0" prefWidth="141.0" text="Student Type">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="stuType" layoutX="188.0" layoutY="462.0" prefHeight="25.0" prefWidth="300.0" />
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

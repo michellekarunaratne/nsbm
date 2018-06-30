@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="334.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.PostGradDetailsController">
+   <children>
+      <Pane layoutX="5.0" prefHeight="83.0" prefWidth="600.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Pane layoutX="-5.0" prefHeight="83.0" prefWidth="152.0" style="-fx-background-color: #2ed573;">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_Student_Male_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="242.0" layoutY="15.0" prefHeight="53.0" prefWidth="219.0" text="Student" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="253.0" prefWidth="152.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Button layoutY="56.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="152.0" style="-fx-background-color: #ced6e0;" text="Profile">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="178.0" layoutY="115.0" prefHeight="175.0" prefWidth="403.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <Label layoutX="19.0" layoutY="34.0" prefHeight="32.0" prefWidth="112.0" text="Qualification Type">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="78.0" prefHeight="32.0" prefWidth="119.0" text="Year Of Completion">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearOfCompletion" layoutX="148.0" layoutY="81.0" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="qualification" layoutX="148.0" layoutY="37.0" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="19.0" layoutY="8.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="118.0" prefHeight="32.0" prefWidth="112.0" text="Institue">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="institute" layoutX="148.0" layoutY="121.0" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

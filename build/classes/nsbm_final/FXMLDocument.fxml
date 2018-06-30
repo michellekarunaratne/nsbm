@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.FXMLDocumentController">
+    <children>
+      <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #1e3799;">
+               <children>
+                  <Pane prefHeight="215.0" prefWidth="200.0" style="-fx-background-color: #2ed573;">
+                     <children>
+                        <ImageView fitHeight="184.0" fitWidth="175.0" layoutX="10.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/14925379_1802602363167431_4124521307173898575_n.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="11.0" layoutY="236.0" prefHeight="243.0" prefWidth="175.0" style="-fx-background-color: #222f3e;">
+                     <children>
+                        <ImageView fitHeight="111.0" fitWidth="117.0" layoutX="32.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/person_1.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="29.0" layoutY="122.0" prefHeight="35.0" prefWidth="117.0" text="New User?" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_signup" layoutX="62.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #2C3A47;" text="Sign up" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label layoutX="209.0" layoutY="45.0" prefHeight="53.0" prefWidth="200.0" text="Welcome">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="90.0" prefHeight="17.0" prefWidth="145.0" text="Sign in to continue" textFill="#6f6d6d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFeilduserName" layoutX="209.0" layoutY="157.0" prefHeight="25.0" prefWidth="259.0" promptText="Registration Number">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordFielduserName" layoutX="209.0" layoutY="197.0" prefHeight="25.0" prefWidth="259.0" promptText="Password">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btn_login" layoutX="251.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: #1e3799;" styleClass="loginBtn" text="Login">
+               <stylesheets>
+                  <URL value="@../css/stylesheet.css" />
+                  <URL value="@css/css/stylesheet.css" />
+               </stylesheets></Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

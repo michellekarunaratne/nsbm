@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="451.0" prefWidth="662.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm_final.StudentProfileController">
+    <stylesheets>
+        <URL value="@studentprofile.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="83.0" prefWidth="662.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Pane prefHeight="83.0" prefWidth="149.0" style="-fx-background-color: #2ed573;">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_Student_Male_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="242.0" layoutY="15.0" prefHeight="53.0" prefWidth="219.0" text="Student" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="83.0" prefHeight="368.0" prefWidth="149.0" style="-fx-background-color: #1e3799;">
+         <children>
+            <Button fx:id="btn_profile" layoutY="87.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Profile">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_enroll" layoutY="157.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Enrollement">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_result" layoutY="226.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ced6e0;" text="Results">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutY="310.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #2ed573;" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="149.0" layoutY="83.0" prefHeight="368.0" prefWidth="513.0" style="-fx-background-color: #2c3e50;">
+         <children>
+            <Pane fx:id="pnl_result" prefHeight="368.0" prefWidth="513.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="10.0" layoutY="14.0" prefHeight="342.0" prefWidth="493.0" style="-fx-background-color: #dfe4ea;">
+                     <children>
+                        <TableView fx:id="tableGrade" layoutX="13.0" layoutY="42.0" prefHeight="197.0" prefWidth="463.0">
+                           <columns>
+                              <TableColumn fx:id="columnExamSubjectCode" prefWidth="227.0" text="Subject Code" />
+                              <TableColumn fx:id="columnExamYear" prefWidth="75.0" text="Year" />
+                              <TableColumn fx:id="columnExamSemester" text="Semester" />
+                              <TableColumn fx:id="columnExamGrade" text="Grade" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="15.0" layoutY="296.0" prefHeight="32.0" prefWidth="74.0" text="Year">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="viewExamYear" layoutX="52.0" layoutY="300.0" prefHeight="25.0" prefWidth="47.0" />
+                        <Button alignment="CENTER_RIGHT" layoutX="275.0" layoutY="296.0" mnemonicParsing="false" onAction="#displayExamGradeButton" prefHeight="32.0" prefWidth="204.0" style="-fx-background-color: #dfe4ea;" text="View Exam Grade Details" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="15.0" layoutY="8.0" prefHeight="32.0" prefWidth="149.0" text="View Exam Grades" underline="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="viewExamSemester" layoutX="168.0" layoutY="300.0" prefHeight="25.0" prefWidth="47.0" />
+                        <Label layoutX="106.0" layoutY="296.0" prefHeight="32.0" prefWidth="62.0" text="Semester">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_profile" prefHeight="368.0" prefWidth="513.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Button fx:id="btn_edit" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="23.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="155.0" style="-fx-background-color: #ffffff;" text="Edit Details" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_view" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="344.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #ffffff;" text="View More Details" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="25.0" layoutY="29.0" prefHeight="263.0" prefWidth="463.0" style="-fx-background-color: #dfe4ea;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="43.0" prefHeight="32.0" prefWidth="129.0" text="Registration ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="81.0" prefHeight="32.0" prefWidth="47.0" text="Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="119.0" prefHeight="32.0" prefWidth="47.0" text="Faculty">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="registration" layoutX="125.0" layoutY="46.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="faculty" layoutX="125.0" layoutY="122.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="name" layoutX="125.0" layoutY="84.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="8.0" prefHeight="26.0" prefWidth="68.0" text="Details" underline="true">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="159.0" prefHeight="32.0" prefWidth="47.0" text="Email">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="email" layoutX="125.0" layoutY="162.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="194.0" prefHeight="32.0" prefWidth="68.0" text="Telephone">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="telephone" layoutX="125.0" layoutY="200.0" prefHeight="26.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_enroll" prefHeight="368.0" prefWidth="513.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="23.0" layoutY="332.0" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="Select Year">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="year" layoutX="121.0" layoutY="332.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="23.0" layoutY="296.0" prefHeight="32.0" prefWidth="161.0" text="Edit Enrolled Subjects" underline="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_editSubject" alignment="TOP_LEFT" layoutX="369.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" text="Select Subject" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="10.0" layoutY="8.0" prefHeight="293.0" prefWidth="493.0" style="-fx-background-color: #dfe4ea;">
+                     <children>
+                        <TableView fx:id="tableSubject" layoutX="15.0" layoutY="61.0" prefHeight="197.0" prefWidth="463.0">
+                           <columns>
+                              <TableColumn fx:id="columnSubjectCode" prefWidth="83.0" text="Subject Code" />
+                              <TableColumn fx:id="columnSubjectName" prefWidth="190.0" text="Subject Name" />
+                              <TableColumn fx:id="columnCredit" prefWidth="53.0" text="Credits" />
+                              <TableColumn fx:id="columnFee" prefWidth="70.0" text="Fee" />
+                              <TableColumn fx:id="columnSelect" prefWidth="66.0" text="Select" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="173.0" layoutY="30.0" prefHeight="32.0" prefWidth="74.0" text="Year">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="viewYear" layoutX="230.0" layoutY="34.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Button alignment="TOP_LEFT" layoutX="15.0" layoutY="258.0" mnemonicParsing="false" onAction="#viewSubjectButton" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #dfe4ea;" text="View Subjects" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="15.0" layoutY="-2.0" prefHeight="32.0" prefWidth="170.0" text="View Enrolled Subjects" underline="true">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="TOP_LEFT" layoutX="349.0" layoutY="258.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: #dfe4ea;" text="Delete Subject" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
